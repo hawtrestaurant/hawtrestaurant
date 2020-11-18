@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HAWTRestaurant</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+          <h1 class="text-center"><img alt="Howt Logo" height="50" width="50" id='hawtPic' src="https://www.pinclipart.com/picdir/big/246-2469209_saying-n-lit-hot-hawt-fuego-fire-catch.png">HAWTRestaurants</h1>
+          <h3 class="text-center">Book your seat before they are all gone!</h3>
+          <hr>
+        
+        <h2 class="text-center">
+          <a href="/tables">
+          <button class="btn btn-primary btn-lg" id="tableBtn"><span class="fa fa-plus"></span> View Tables</button>
+          </a>
+          <a href="/reserve">
+          <button class="btn btn-danger btn-lg" id="reserveBtn"><span class="fa fa-plus"></span> Make Reservation</button>
+          </a>
+        </h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Current Reservations</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul id="tableList" class="list-group">_</ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h4>Waiting List</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul id="waitList" class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        Table Reservation
+                    </div>
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="reserve-name">Name</label>
+                                <input type="text" class="form-control" id="reserve-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="reserve-phone">Phone Number</label>
+                                <input type="text" class="form-control" id="reserve-phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="reserve-email">Email</label>
+                                <input type="text" class="form-control" id="reserve-email">
+                            </div>
+                            <div class="form-group">
+                                <label for="reserve-id">Unique ID</label>
+                                <input type="text" class="form-control" id="reserve-id">
+                            </div>
+                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/api/tables">API Table Link</a>
+                     | 
+                    <a href="/api/waitlist">API Wait List</a>
+                </p>
+            </div>
+            
+        </footer>
+    </div>
+
+</body>
+</html>
